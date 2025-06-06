@@ -1,6 +1,6 @@
 
 
-let billList = [];
+
 
 window.onload = function () {
   const button = document.getElementById("addBillButton");
@@ -10,6 +10,9 @@ window.onload = function () {
   const billDate = document.getElementById("billdate");
   const billType = document.getElementById("billType");
   const textArea = document.getElementById("textArea");
+  const checkBill = document.getElementById("checkBills");
+  const dateList = [];
+  const billList = [];
 
   function reset() {
 
@@ -35,18 +38,11 @@ window.onload = function () {
 
 
   button.addEventListener("click", async () => {
-  const bill = billName.value + " " + billAmount.value + "$" + " " + "due" + " "  + billDate.value + " " + billType.value;
+  const bill = billName.value + " " + billAmount.value + "$" + " " + "due" + " "  + billDate.value + " " + "type:" + " " + billType.value;
   billList.push(bill);
+  dateList.push(billDate.value);
   textArea.value = billList.join('\n');
 
-//   // fs module code 
-//   fs.writeFile(filePath, '', (err) => {
-//   if (err) {
-//     console.error('Error clearing JSON file:', err);
-//   } else {
-//     console.log('JSON file cleared successfully.');
-//   }
-// });
 
 // // 5. Convert the array to a JSON string
 const jsonString = JSON.stringify(billList, null, 2); // Use 2 for indentation
@@ -57,27 +53,50 @@ const result = await window.electronAPI.saveJsonToFile(jsonString);
     alert('Failed to save: ' + result.error);
   }
 
-// // 6. Write the string to the file
-// fs.writeFile(filePath, jsonString, 'utf8', (err) => { // Use 'utf8' encoding
-//   if (err) {
-//     console.error('Error writing to file:', err); // Log any errors
-//   } else {
-//     console.log('Data written to file successfully!'); // Success message
-//   }
-// });
 
   reset();
+  
+
+// for (let i = 0; i < dateList.length; i++) {
+//     const currentDate = new Date();
+//     const billDate = new Date(dateList[i]);
+    
+//     // Check if the bill is due this month
+//     if (billDate.getMonth() === currentDate.getMonth() && 
+//         billDate.getFullYear() === currentDate.getFullYear()) {
+//       alert(`Bill due this month: ${billList[i]}`);
+//     }
+//   }
+billLogic();
+
   });
-};
 
-
-// add a  button to check if the bill is due monthly if checked yes, add a fucntion that displays bill each monthy, you will need to incorporate date checking 
-
-// the code bwlow is code snippets for the file save system 
+  checkBill.addEventListener("click", () => {
+  billLogic();
+});
 
 
 
 // to see the logsin hr render process use crtl + shift + i 
+
+
+// bill alert logic 
+
+function billLogic() {
+
+  for (let i = 0; i < dateList.length; i++) {
+    const currentDate = new Date();
+    const billDate = new Date(dateList[i]);
+    
+    // Check if the bill is due this month
+    if (billDate.getMonth() === currentDate.getMonth() && 
+        billDate.getFullYear() === currentDate.getFullYear()) {
+      alert(`Bill due this month: ${billList[i]}`);
+    };
+  };
+};
+
+};
 
 
 

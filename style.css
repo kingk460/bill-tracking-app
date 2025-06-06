@@ -2,7 +2,7 @@ body {
   
 
 
-background-color: #d965dd;
+background-color: #000000;
 }
 
 
@@ -14,8 +14,19 @@ h1{
 
 }
 
+p {
+
+    
+    color: #82e6c8;
+}
+
+#textArea {
+    
+    width: 600px;
+}
+
 #clearBills{
     background-color: #e76262;
-    color: rgb(226, 4, 4);
+    color: rgb(255, 255, 255);
   
 }
