@@ -38,7 +38,7 @@ window.onload = function () {
 
 
   button.addEventListener("click", async () => {
-  const bill = billName.value + " " + billAmount.value + "$" + " " + "due" + " "  + billDate.value + " " + "type:" + " " + billType.value;
+  const bill = billName.value + " " + billAmount.value + "$" + " " + "due" + " "  + billDate.value + " " + "Type:" + " " + billType.value;
   billList.push(bill);
   dateList.push(billDate.value);
   textArea.value = billList.join('\n');

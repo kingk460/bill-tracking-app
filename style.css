@@ -2,27 +2,41 @@ body {
   
 
 
-background-color: #000000;
+background-image: url(image.jpg.jpg);
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 
 
 
 h1{
-    font-size: 2em;
-    color: #455fd1;
+    font-size: 1.5em;
+    color: #ffffff;
 
 }
 
 p {
 
+
     
-    color: #82e6c8;
+    color: #ffffff;
 }
 
 #textArea {
-    
+    resize: none;
     width: 600px;
+    height: 150px;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background: transparent;
+    color: #ffffff;
+    padding: 20px;
+}
+
+#textAreaContainer {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #clearBills{
