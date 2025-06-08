@@ -2,13 +2,30 @@ body {
   
 
 
-background-image: url(image.jpg.jpg);
+background-image: url(background.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 }
 
+billAmount {
 
+    background-color: #ffffff;
+}
 
+billdate {
+
+    background-color: #ffffff;
+}
+
+billType {
+
+    background-color: #ffffff;
+}
+
+billName {
+
+    background-color: #ffffff;
+}
 
 h1{
     font-size: 1.5em;
@@ -32,6 +49,7 @@ p {
     background: transparent;
     color: #ffffff;
     padding: 20px;
+    overflow-y:  scroll;  height: 100px;
 }
 
 #textAreaContainer {

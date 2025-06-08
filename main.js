@@ -15,8 +15,8 @@ const filePath = path.join(userDataPath, 'data.json'); // Create the file path
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 710,
+    height: 500,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'), // ✅ Correct placement
       contextIsolation: true,

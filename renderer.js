@@ -28,7 +28,7 @@ window.onload = function () {
     const jsonString = JSON.stringify(billList, null, 2);
     const result = await window.electronAPI.clearJsonFile();
     if (result.success) {
-      alert('JSON file cleared successfully.');
+      alert('Content claeared from app memory.');
     } else {
       alert('Failed to clear JSON file: ' + result.error);
     }
@@ -48,7 +48,7 @@ window.onload = function () {
 const jsonString = JSON.stringify(billList, null, 2); // Use 2 for indentation
 const result = await window.electronAPI.saveJsonToFile(jsonString);
   if (result.success) {
-    alert('List saved to data.json!');
+    alert('Content saved to app memory');
   } else {
     alert('Failed to save: ' + result.error);
   }
@@ -92,11 +92,9 @@ function billLogic() {
     if (billDate.getMonth() === currentDate.getMonth() && 
         billDate.getFullYear() === currentDate.getFullYear()) {
       alert(`Bill due this month: ${billList[i]}`);
-    };
+        };
+
   };
 };
 
 };
-
-
-
