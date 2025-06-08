@@ -10,5 +10,3 @@ the App also uses the date function to check the current date and the user enter
 if there are any bills due that month then the Application will send out a alert.
 The Application uses a clean simple UI made in CSS. 
 
-
-all rights reserved 
