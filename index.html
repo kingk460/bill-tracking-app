@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Bill Management App</title>
-  <script defer src = "main.js"></script>
-  <script defer src = "renderer.js"></script>
-  <script defer src = "preload.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bill Management App</title>
+    <script defer src="main.js"></script>
+    <script defer src="renderer.js"></script>
+    <script defer src="preload.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bill Management App</h1>
 
-</head>
-<body>
-  <h1>PAY AND MANAGE ALL YOUR BILLS IN ONE PLACE!</h1>
+    <div>
+      <p>Add a bill below that is part of a monthly cycle</p>
+      <input type="number" id="billAmount" placeholder="Enter amount $" />
+      <input type="date" id="billdate" />
+      <input type="text" id="billType" placeholder="Enter type of bill" />
+      <input type="text" id="billName" placeholder="Enter name of bill" />
+    </div>
 
-  <div>
-  <p>Add a bill that is part of a monthly cycle</p>
-  <input type="number" id="billAmount" placeholder="Enter amount $" />
-  <input type="date" id="billdate" />
-  <input type="text" id="billType" placeholder="Enter type of bill" />
-  <input type="text" id="billName" placeholder="Enter name of bill" />
-  
-  </div>
+    <div id="textAreaContainer">
+      <textarea id="textArea" rows="10" cols="40" readonly></textarea>
+    </div>
 
-  <div id="textAreaContainer">
-
-    <textarea id="textArea" rows="10" cols="40" readonly></textarea>
-  </div>
-
-
-  <div>
-    <button id="addBillButton">Add Bill</button>
-    <button id="checkBills">Check Bills due this month</button>
-    <button id="clearBills">Clear Bills</button>
-    
-  </div>
-
-
-
-
-
-</body>
+    <div>
+      <button id="addBillButton">Add Bill</button>
+      <button id="checkBills">Check Bills due this month</button>
+      <button id="clearBills">Clear Bills</button>
+    </div>
+  </body>
 </html>

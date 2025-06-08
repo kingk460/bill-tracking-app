@@ -1,55 +1,45 @@
 body {
-  
-
-
-background-image: url(background.jpg);
-background-size: cover;
-background-repeat: no-repeat;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 billAmount {
-
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 billdate {
-
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 billType {
-
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 billName {
-
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
-h1{
-    font-size: 1.5em;
-    color: #ffffff;
-
+h1 {
+  font-size: 1.5em;
+  color: #ffffff;
 }
 
 p {
-
-
-    
-    color: #ffffff;
+  color: #ffffff;
 }
 
 #textArea {
-    resize: none;
-    width: 600px;
-    height: 150px;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-    background: transparent;
-    color: #ffffff;
-    padding: 20px;
-    overflow-y:  scroll;  height: 100px;
+  resize: none;
+  width: 600px;
+  height: 150px;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  background: transparent;
+  color: #ffffff;
+  padding: 20px;
+  overflow-y: scroll;
+  height: 100px;
 }
 
 #textAreaContainer {
@@ -57,8 +47,7 @@ p {
   padding-bottom: 10px;
 }
 
-#clearBills{
-    background-color: #e76262;
-    color: rgb(255, 255, 255);
-  
+#clearBills {
+  background-color: #e76262;
+  color: rgb(255, 255, 255);
 }
